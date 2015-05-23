@@ -2,24 +2,19 @@
 
 app.controller("headController", function ($scope, userData) {
     $scope.title = 'The Soul Network';
-    //$scope.init = function() { };
+    
+    /*
+    //username, password, confirmPassword, name, email, success, error
+    userData.registerUser('scienide00', 'fuck0ff', 'fuck0ff', 'SCiENiDE', 'fk@this',
+        function (data, status, headers, config) {
 
-    userData.loginUser('scienide', 'fuck0ff',
-            function (data, status, headers, config) {
-                $scope.data = data;
-                sessionStorage['token'] = data.token_type + ' ' + data.access_token;
-                console.log('user ' + data.userName + ' logged in.');
-            },
-            function (error, status, headers, config) {
-                console.log(status, error);
-            });
+        },
+        function(data, status, headers, config) {
 
-    userData.logoutUser(
-            function (data, status, headers, config) {
-                sessionStorage.clear();
-                console.log('user logged out.');
-            },
-            function (error, status, headers, config) {
-                console.log(status, error);
-            });
+        });
+    */
+    
+    //userData.loginUser('scienide', 'fuck0ff', /*success, error*/);
+    //userData.getUserFullData('scienide');
+    //userData.getFriendWall('John');
 });
