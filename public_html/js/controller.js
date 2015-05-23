@@ -19,7 +19,7 @@ app.controller("headController", function ($scope, userData) {
                 sessionStorage.clear();
                 console.log('user logged out.');
             },
-            function (data, status, headers, config) {
+            function (error, status, headers, config) {
                 console.log(status, error);
             });
 });
