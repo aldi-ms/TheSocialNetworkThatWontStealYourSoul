@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("headController", function ($scope, userData) {
+app.controller("headController", function ($scope, userData, postData) {
     $scope.title = 'The Soul Network';
     
     /*
@@ -12,9 +12,15 @@ app.controller("headController", function ($scope, userData) {
         function(data, status, headers, config) {
 
         });
-    */
-    
-    //userData.loginUser('scienide', 'fuck0ff', /*success, error*/);
+    */    
+    //userData.loginUser('scienide00', 'fuck0ff');    
     //userData.getUserFullData('scienide');
     //userData.getFriendWall('John');
+    
+    //postData.addNewPost('post from js', 'scienide00')
+    //postData.getPostById(2196);
+    //postData.likePost(2196);
+    //postData.unlikePost(2196);
+    //postData.previewPostLikes(2196);
+    //postData.deletePost(2196);
 });

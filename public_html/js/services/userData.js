@@ -1,15 +1,4 @@
-/*
-app.factory('userData', function userData($resource) {
-    var resource = $resource('http://softuni-social-network.azurewebsites.net/api/users/:url',
-    {
-        url: '@url'
-    });
-    
-    function userLogin() {
-        return resource.post();
-    }
-});
-*/
+"use strict";
 
 app.factory('userData', function userData($http) {
     var baseUrl = 'http://softuni-social-network.azurewebsites.net/api/users/';
@@ -30,6 +19,7 @@ app.factory('userData', function userData($http) {
             success(data, status, headers(), config);
         })
         .error(function (data, status, headers, config) {
+                console.log(status, data);
                 error(data, status, headers(), config);
         });
     }
@@ -201,13 +191,13 @@ app.factory('userData', function userData($http) {
     }
     
     return {
-        loginUser: loginUser,
-        logoutUser: logoutUser,
-        registerUser: registerUser,
-        previewUser: previewUser,
-        getUserFullData: getUserFullData,
-        searchUsersByName: searchUsersByName,
-        getFriendWall: getFriendWall,
+        loginUser : loginUser,
+        logoutUser : logoutUser,
+        registerUser : registerUser,
+        previewUser : previewUser,
+        getUserFullData : getUserFullData,
+        searchUsersByName : searchUsersByName,
+        getFriendWall : getFriendWall,
         getFriendFullFriendList : getFriendFullFriendList,
         getFriendPreviewFriendList : getFriendPreviewFriendList
     };
