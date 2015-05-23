@@ -121,8 +121,7 @@ app.factory('userData', function userData($http) {
         });
     }
     
-    function getFriendWall(userName, startId, pageSize) {
-        
+    function getFriendWall(userName, startId, pageSize) {        
         // Set default page size & startId if not set
         if (!pageSize) {
             pageSize = 5;
