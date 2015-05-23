@@ -28,3 +28,35 @@
   content: "";
   padding: 0;
 }
+
+// Custom CSS starts here
+
+div.container {
+    border: thick solid #000 !important;
+    padding: 20px;
+}
+
+.container > label {    
+    font-size: 16pt;
+    font-weight: bold;
+    color: #696969;
+    margin: 0px 15px;
+}
+
+.container > input {
+    border: thin solid #000;
+    font-size: 14pt;
+    padding: 10px 30px;
+    margin: 10px;
+}
+
+.container > input[type='button'] {    
+    color: #FFF;
+    background-color: #1E90FF;
+    font-weight: bold;
+}
+
+.container > input[type='text'] {
+    color: #696969;
+    background-color: #F5F5F5;
+}
