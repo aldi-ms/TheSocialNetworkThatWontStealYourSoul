@@ -29,5 +29,5 @@ app.controller("headController", function ($scope, userData, postData, profileDa
     //profileData.getFriendRequests();
     //profileData.acceptFriendRequest(1703);
     //profileData.getSelfFriendList();
-    profileData.getSelfNewsFeed();
+    //profileData.getSelfNewsFeed();
 });
