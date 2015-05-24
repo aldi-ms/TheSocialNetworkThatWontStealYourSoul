@@ -2,6 +2,7 @@
 
 app.factory('userData', function userData($http) {
     var baseUrl = 'http://softuni-social-network.azurewebsites.net/api/users/';
+    var loggedIn = false;
     
     function loginUser(username, password, success, error) {
         $http({
@@ -15,6 +16,7 @@ app.factory('userData', function userData($http) {
         .success(function (data, status, headers, config) {
             //sessionStorage['token'] = data.token_type + ' ' + data.access_token;
             setSessionToken(data);
+            loggedIn = true;
             console.log('user ' + data.userName + ' logged in.');
             success(data, status, headers(), config);
         })
@@ -33,6 +35,7 @@ app.factory('userData', function userData($http) {
             }
         })
         .success(function (data, status, headers, config) {
+                loggedIn = false;
                 sessionStorage.clear();
                 console.log('user logged out.');
                 success(data, status, headers(), config);
@@ -56,7 +59,7 @@ app.factory('userData', function userData($http) {
             }
         })
         .success(function (data, status, headers, config) {
-            //sessionStorage['token'] = data.token_type + ' ' + data.access_token;
+            loggeIn = true;
             setSessionToken(data);
             console.log('user ' + data.userName + ' registered.');
             success(data, status, headers(), config);

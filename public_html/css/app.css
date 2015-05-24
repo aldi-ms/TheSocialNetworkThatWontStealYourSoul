@@ -29,34 +29,110 @@
   padding: 0;
 }
 
-// Custom CSS starts here
-
-div.container {
-    border: thick solid #000 !important;
-    padding: 20px;
+#title {
+    margin: 30px 30px 50px 37%;
 }
 
-.container > label {    
+div#container {
+    border: thin solid #696969;
+    padding: 35px;
+    margin: 20px;
+    margin-left: 4%;
+    width: 45%;
+    display: inline-block;
+    float: left;
+}
+
+#container > label {
     font-size: 16pt;
     font-weight: bold;
     color: #696969;
-    margin: 0px 15px;
+    margin: 10px 15px;
+    display: inline-block;
+    width: 35%;
 }
 
-.container > input {
+#container > input {
     border: thin solid #000;
     font-size: 14pt;
     padding: 10px 30px;
     margin: 10px;
+    width: 45%;
 }
 
-.container > input[type='button'] {    
+#container > input[type='button'] {    
     color: #FFF;
     background-color: #1E90FF;
     font-weight: bold;
 }
 
-.container > input[type='text'] {
+#container > input[type='text'], input[type='password'] {
     color: #696969;
     background-color: #F5F5F5;
+}
+
+#container > input[type='radio'] {
+    width: auto;
+}
+
+nav {
+    width: 15%;
+    border: thin solid black;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    float: left;
+}
+
+nav > input[type='text'] {
+    padding: 10px;
+    margin: 35px 20px 20px 35px;
+    width: 62%;
+    color: #696969;
+    border: thin solid black;
+    border-radius: 5px;
+}
+
+nav > img {
+    margin: 10px;
+    margin-bottom: 25px;
+}
+
+nav > a {
+    display: block;
+    background-color: #1E90FF;
+    color: #FFF;
+    padding: 10px 40px;
+    margin: 20px;
+    border: thin solid black;
+    text-decoration: none;
+    width: 50%;
+}
+
+div#friendContainer {
+    border: thin solid black;
+    display: inline-block;
+    float: right;
+    margin: 20px;
+    width: 20%;
+}
+
+div#friendContainer > a {
+    display: block;
+    font-size: 18pt;
+    margin: 10px;
+    margin-left: 40%;
+    text-decoration: none;
+    color: black;
+}
+
+div#container > a, button {
+    border: thin solid black;
+    margin: 30px;
+    padding: 15px 50px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #1E90FF;
+    font-size: 16pt;
+    font-weight: bold;
 }

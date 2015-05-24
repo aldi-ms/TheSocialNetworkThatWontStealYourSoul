@@ -1,8 +1,12 @@
 "use strict";
 
-app.controller("headController", function ($scope, userData, postData, profileData) {
+app.controller("mainController", function ($scope, $location, userData, postData, profileData) {
     $scope.title = 'The Soul Network';
-    
+    $scope.userData = userData;
+    if (sessionStorage['token'] != null) {
+        $scope.logged = true;
+    }
+    //userData.logoutUser();
     /*
     //username, password, confirmPassword, name, email, success, error
     userData.registerUser('scienide00', 'fuck0ff', 'fuck0ff', 'SCiENiDE', 'fk@this',
@@ -13,7 +17,10 @@ app.controller("headController", function ($scope, userData, postData, profileDa
 
         });
     */    
-    //userData.loginUser('scienide00', 'fuck0ff');  
+    //userData.loginUser('scienide00', 'fuck0ff',
+    //function(data) {
+    //    $scope.userData = data;
+    //});  
     //userData.logoutUser();  
     //userData.getUserFullData('scienide');
     //userData.getFriendWall('John');
